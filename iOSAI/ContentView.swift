@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var viewModel = ChatViewModel()
     @State private var showClearConfirmation = false
     @State private var scrollToBottom = false
+    @State private var showShareSheet = false
     
     var body: some View {
         NavigationStack {
@@ -38,7 +39,7 @@ struct ContentView: View {
                         }
                         
                         Button {
-                            // Share functionality could be added here
+                            showShareSheet = true
                         } label: {
                             Label("Share Conversation", systemImage: "square.and.arrow.up")
                         }
@@ -75,6 +76,9 @@ struct ContentView: View {
                 }
             } message: {
                 Text(viewModel.errorMessage ?? "An unknown error occurred")
+            }
+            .sheet(isPresented: $showShareSheet) {
+                ShareSheet(activityItems: [generateShareableText()])
             }
         }
     }
@@ -192,6 +196,18 @@ struct ContentView: View {
     
     // MARK: - Private Methods
     
+    private func generateShareableText() -> String {
+        var text = "Apple Intelligence Chat Conversation\n"
+        text += "Generated on \(Date().formatted(date: .long, time: .shortened))\n\n"
+        
+        for message in viewModel.messages {
+            let sender = message.isUser ? "You" : "Apple Intelligence"
+            text += "\(sender): \(message.content)\n\n"
+        }
+        
+        return text
+    }
+    
     private func scrollToLatestMessage(proxy: ScrollViewProxy) {
         withAnimation(.easeOut(duration: 0.3)) {
             if viewModel.isLoading {
@@ -221,6 +237,18 @@ struct FeatureRow: View {
                 .foregroundStyle(.secondary)
         }
     }
+}
+
+// MARK: - Share Sheet
+
+struct ShareSheet: UIViewControllerRepresentable {
+    let activityItems: [Any]
+    
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+    }
+    
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
 
 // MARK: - Preview
