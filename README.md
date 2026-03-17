@@ -1,10 +1,11 @@
 # iOS AI - Apple Foundation Models Chat App
 
-A SwiftUI-based iOS 18 app that allows users to have conversations with Apple's on-device Foundation Models (Apple Intelligence).
+A SwiftUI-based iOS app that allows users to have conversations with Apple's on-device Foundation Models (Apple Intelligence).
 
 ## Features
 
-- **On-Device AI**: Powered by Apple Intelligence Foundation Models running locally on your device
+- **On-Device AI**: Powered by Apple Intelligence Foundation Models running locally on your device (iOS 18+)
+- **Simulation Mode**: Works on iOS 17+ with simulated responses for testing the UI
 - **Private & Secure**: All processing happens on-device - no data is sent to external servers
 - **Streaming Responses**: Real-time streaming of AI responses as they're generated
 - **Markdown Support**: AI responses support markdown formatting
@@ -14,9 +15,9 @@ A SwiftUI-based iOS 18 app that allows users to have conversations with Apple's 
 
 ## Requirements
 
-- iOS 18.0 or later
-- iPhone 15 Pro or later (A17 Pro chip required for Apple Intelligence)
-- Apple Intelligence enabled in Settings
+- iOS 17.0 or later (minimum deployment target)
+- **For full AI features**: iOS 18.0+ and iPhone 15 Pro or later (A17 Pro chip required for Apple Intelligence)
+- Apple Intelligence enabled in Settings (iOS 18+ only)
 
 ## Architecture
 
@@ -63,11 +64,18 @@ iOSAI/
 4. Watch as the AI responds in real-time
 5. Long-press on messages to copy them
 
-## Apple Intelligence Setup
+### Simulation Mode (iOS 17)
 
-To use this app, you need to:
+On iOS 17 or devices without Apple Intelligence, the app runs in simulation mode:
+- A banner indicates simulation mode is active
+- Responses are simulated to demonstrate the UI
+- Full AI capabilities require iOS 18+ with Apple Intelligence
 
-1. Have a compatible device (iPhone 15 Pro or later)
+## Apple Intelligence Setup (iOS 18+)
+
+To use full AI features on iOS 18+:
+
+1. Have a compatible device (iPhone 15 Pro or later with A17 Pro chip)
 2. Update to iOS 18 or later
 3. Enable Apple Intelligence in Settings:
    - Go to Settings > Apple Intelligence & Siri

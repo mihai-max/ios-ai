@@ -51,10 +51,10 @@ struct ContentView: View {
                     // Status indicator
                     HStack(spacing: 4) {
                         Circle()
-                            .fill(viewModel.isAppleIntelligenceAvailable ? .green : .red)
+                            .fill(viewModel.isAppleIntelligenceAvailable ? .green : (viewModel.isSimulationMode ? .orange : .red))
                             .frame(width: 8, height: 8)
                         
-                        Text(viewModel.isAppleIntelligenceAvailable ? "Ready" : "Unavailable")
+                        Text(viewModel.isAppleIntelligenceAvailable ? "Ready" : (viewModel.isSimulationMode ? "Simulation" : "Unavailable"))
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                     }
@@ -86,6 +86,11 @@ struct ContentView: View {
         ScrollViewReader { proxy in
             ScrollView {
                 LazyVStack(spacing: 0) {
+                    // Simulation mode banner
+                    if viewModel.isSimulationMode {
+                        simulationModeBanner
+                    }
+                    
                     // Welcome message when empty
                     if viewModel.messages.isEmpty {
                         welcomeView
@@ -166,6 +171,23 @@ struct ContentView: View {
             Spacer()
         }
         .padding(.horizontal, 32)
+    }
+    
+    private var simulationModeBanner: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "info.circle")
+                .font(.caption)
+            
+            Text("Running in simulation mode. iOS 18+ required for Apple Intelligence.")
+                .font(.caption)
+        }
+        .foregroundStyle(.secondary)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 8)
+        .background(Color(.systemGray6))
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .padding(.horizontal)
+        .padding(.top, 8)
     }
     
     // MARK: - Private Methods
