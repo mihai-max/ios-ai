@@ -1,21 +1,23 @@
 // swift-tools-version: 5.9
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// Note: The primary way to build this app is via iOSAI.xcodeproj in Xcode.
+// This Package.swift is provided for tooling compatibility only.
+// FoundationModels requires iOS 26.0+.
 
 import PackageDescription
 
 let package = Package(
     name: "iOSAI",
     platforms: [
-        .iOS(.v18)
+        .iOS(.v26)
     ],
     products: [
-        .library(
+        .executable(
             name: "iOSAI",
             targets: ["iOSAI"]
         ),
     ],
     targets: [
-        .target(
+        .executableTarget(
             name: "iOSAI",
             path: "iOSAI",
             resources: [

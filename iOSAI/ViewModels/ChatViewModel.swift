@@ -78,17 +78,14 @@ final class ChatViewModel {
             return
         }
         
-        // Create a new session with optional instructions
-        session = LanguageModelSession(
-            model: model,
-            instructions: {
-                """
-                You are a helpful AI assistant powered by Apple Intelligence. \
-                Provide clear, concise, and helpful responses. \
-                You can use markdown formatting in your responses.
-                """
-            }
-        )
+        // Create a new session with system instructions
+        session = LanguageModelSession(model: model) {
+            """
+            You are a helpful AI assistant powered by Apple Intelligence. \
+            Provide clear, concise, and helpful responses. \
+            You can use markdown formatting in your responses.
+            """
+        }
     }
     
     /// Sends a message to the Foundation Model
@@ -123,16 +120,15 @@ final class ChatViewModel {
             
             // Stream the response
             let stream = session.streamResponse(to: prompt)
-            
-            var fullResponse = ""
-            for try await chunk in stream {
-                fullResponse += chunk
-                
-                // Update the last message with streaming content
+
+            for try await partialResponse in stream {
+                let currentContent = partialResponse.text
+
+                // Update the last message with the latest partial content
                 if let lastIndex = messages.indices.last {
                     messages[lastIndex] = ChatMessage(
                         id: aiMessage.id,
-                        content: fullResponse,
+                        content: currentContent,
                         isUser: false,
                         timestamp: aiMessage.timestamp,
                         status: .sent

@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA1B000000000000000001AA /* iOSAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F000000000000000001AA /* iOSAIApp.swift */; };
+		AA1B000000000000000002AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F000000000000000002AA /* ContentView.swift */; };
+		AA1B000000000000000003AA /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F000000000000000003AA /* ChatMessage.swift */; };
+		AA1B000000000000000004AA /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F000000000000000004AA /* ChatViewModel.swift */; };
+		AA1B000000000000000005AA /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F000000000000000005AA /* ChatBubbleView.swift */; };
+		AA1B000000000000000006AA /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F000000000000000006AA /* MessageInputView.swift */; };
+		AA1B000000000000000007AA /* TypingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F000000000000000007AA /* TypingIndicatorView.swift */; };
+		AA1B000000000000000008AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1F000000000000000008AA /* Assets.xcassets */; };
+		AA1B000000000000000009AA /* FoundationModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1F000000000000000009AA /* FoundationModels.framework */; };
+		AA1B00000000000000000BAA /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F00000000000000000BAA /* ChatViewModelTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA1F000000000000000001AA /* iOSAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAIApp.swift; sourceTree = "<group>"; };
+		AA1F000000000000000002AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA1F000000000000000003AA /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		AA1F000000000000000004AA /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		AA1F000000000000000005AA /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
+		AA1F000000000000000006AA /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
+		AA1F000000000000000007AA /* TypingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingIndicatorView.swift; sourceTree = "<group>"; };
+		AA1F000000000000000008AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA1F000000000000000009AA /* FoundationModels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoundationModels.framework; path = System/Library/Frameworks/FoundationModels.framework; sourceTree = SDKROOT; };
+		AA1F00000000000000000AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA1F00000000000000000BAA /* ChatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModelTests.swift; sourceTree = "<group>"; };
+		AA1F00000000000000000CAA /* iOSAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1F00000000000000000DAA /* iOSAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA2A000000000000000001AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1B000000000000000009AA /* FoundationModels.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2A000000000000000002AA /* Frameworks (Tests) */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA3G000000000000000001AA /* iOSAI */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F000000000000000001AA /* iOSAIApp.swift */,
+				AA1F000000000000000002AA /* ContentView.swift */,
+				AA3G000000000000000003AA /* Models */,
+				AA3G000000000000000004AA /* ViewModels */,
+				AA3G000000000000000005AA /* Views */,
+				AA3G000000000000000006AA /* Resources */,
+				AA1F00000000000000000AAA /* Info.plist */,
+			);
+			path = iOSAI;
+			sourceTree = "<group>";
+		};
+		AA3G000000000000000002AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F00000000000000000CAA /* iOSAI.app */,
+				AA1F00000000000000000DAA /* iOSAITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA3G000000000000000003AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F000000000000000003AA /* ChatMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA3G000000000000000004AA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F000000000000000004AA /* ChatViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA3G000000000000000005AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F000000000000000005AA /* ChatBubbleView.swift */,
+				AA1F000000000000000006AA /* MessageInputView.swift */,
+				AA1F000000000000000007AA /* TypingIndicatorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA3G000000000000000006AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F000000000000000008AA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA3G000000000000000007AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F000000000000000009AA /* FoundationModels.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA3G000000000000000008AA /* iOSAITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F00000000000000000BAA /* ChatViewModelTests.swift */,
+			);
+			path = iOSAITests;
+			sourceTree = "<group>";
+		};
+		AA3G000000000000000009AA = {
+			isa = PBXGroup;
+			children = (
+				AA3G000000000000000001AA /* iOSAI */,
+				AA3G000000000000000008AA /* iOSAITests */,
+				AA3G000000000000000007AA /* Frameworks */,
+				AA3G000000000000000002AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA4T000000000000000001AA /* iOSAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5C000000000000000001AA /* Build configuration list for PBXNativeTarget "iOSAI" */;
+			buildPhases = (
+				AA2B000000000000000001AA /* Sources */,
+				AA2A000000000000000001AA /* Frameworks */,
+				AA2R000000000000000001AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSAI;
+			productName = iOSAI;
+			productReference = AA1F00000000000000000CAA /* iOSAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA4T000000000000000002AA /* iOSAITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5C000000000000000002AA /* Build configuration list for PBXNativeTarget "iOSAITests" */;
+			buildPhases = (
+				AA2B000000000000000002AA /* Sources (Tests) */,
+				AA2A000000000000000002AA /* Frameworks (Tests) */,
+				AA2R000000000000000002AA /* Resources (Tests) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA4D000000000000000001AA /* PBXTargetDependency */,
+			);
+			name = iOSAITests;
+			productName = iOSAITests;
+			productReference = AA1F00000000000000000DAA /* iOSAITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA4P000000000000000001AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					AA4T000000000000000001AA = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					AA4T000000000000000002AA = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = AA4T000000000000000001AA;
+					};
+				};
+			};
+			buildConfigurationList = AA5C000000000000000003AA /* Build configuration list for PBXProject "iOSAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA3G000000000000000009AA;
+			productRefGroup = AA3G000000000000000002AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA4T000000000000000001AA /* iOSAI */,
+				AA4T000000000000000002AA /* iOSAITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA2R000000000000000001AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1B000000000000000008AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2R000000000000000002AA /* Resources (Tests) */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA2B000000000000000001AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1B000000000000000001AA /* iOSAIApp.swift in Sources */,
+				AA1B000000000000000002AA /* ContentView.swift in Sources */,
+				AA1B000000000000000003AA /* ChatMessage.swift in Sources */,
+				AA1B000000000000000004AA /* ChatViewModel.swift in Sources */,
+				AA1B000000000000000005AA /* ChatBubbleView.swift in Sources */,
+				AA1B000000000000000006AA /* MessageInputView.swift in Sources */,
+				AA1B000000000000000007AA /* TypingIndicatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2B000000000000000002AA /* Sources (Tests) */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1B00000000000000000BAA /* ChatViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA4D000000000000000001AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA4T000000000000000001AA /* iOSAI */;
+			targetProxy = AA4P000000000000000002AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXContainerItemProxy section */
+		AA4P000000000000000002AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA4P000000000000000001AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA4T000000000000000001AA;
+			remoteInfo = iOSAI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin XCBuildConfiguration section */
+		AA6C000000000000000001AA /* Debug (Project) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA6C000000000000000002AA /* Release (Project) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA6C000000000000000003AA /* Debug (App Target) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = iOSAI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iOSAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA6C000000000000000004AA /* Release (App Target) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = iOSAI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iOSAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA6C000000000000000005AA /* Debug (Test Target) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iOSAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSAI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSAI";
+			};
+			name = Debug;
+		};
+		AA6C000000000000000006AA /* Release (Test Target) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iOSAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSAI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSAI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA5C000000000000000001AA /* Build configuration list for PBXNativeTarget "iOSAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA6C000000000000000003AA /* Debug */,
+				AA6C000000000000000004AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5C000000000000000002AA /* Build configuration list for PBXNativeTarget "iOSAITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA6C000000000000000005AA /* Debug */,
+				AA6C000000000000000006AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5C000000000000000003AA /* Build configuration list for PBXProject "iOSAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA6C000000000000000001AA /* Debug */,
+				AA6C000000000000000002AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = AA4P000000000000000001AA /* Project object */;
+}
